@@ -6,8 +6,10 @@
 }
 
 /* Убираем внутренние отступы */
-ul[class],
-ol[class] {
+ul {
+  padding-left: 10px;
+}
+ol {
   padding: 0;
 }
 
