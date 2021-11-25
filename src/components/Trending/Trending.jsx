@@ -23,7 +23,7 @@ export default function Trending() {
         <ul>
           {moovies.map((item) => (
             <li>
-              <Link to={{ pathname: `/moovies/id${item.id}` }}>
+              <Link to={{ pathname: `/moovies/${item.id}` }}>
                 {item.name || item.title}
               </Link>
             </li>

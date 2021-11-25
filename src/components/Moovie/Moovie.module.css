@@ -1,0 +1,26 @@
+.back_btn {
+  margin: 15px;
+  cursor: pointer;
+}
+
+.content {
+  border-bottom: 2px solid black;
+}
+
+.moovie_section {
+  margin-left: 15px;
+  display: flex;
+}
+
+.image {
+  padding-bottom: 15px;
+  margin-right: 25px;
+}
+
+.description {
+  margin-bottom: 20px;
+}
+.additional {
+  padding: 15px;
+  border-bottom: 2px solid black;
+}
