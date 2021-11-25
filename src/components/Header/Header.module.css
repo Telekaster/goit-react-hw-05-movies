@@ -1,0 +1,15 @@
+.nav {
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid black;
+}
+
+.header__nav_links {
+  margin-right: 25px;
+  color: black;
+}
+
+.header__nav_links:hover {
+  color: orangered;
+}
