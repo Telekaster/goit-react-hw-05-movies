@@ -1,13 +1,14 @@
 .back_btn {
   display: block;
   margin: 15px;
-  width: 70px;
+  width: 80px;
   height: 35px;
   border: 1px solid black;
   text-align: center;
   text-decoration: none;
   color: blue;
   background-color: rgb(226, 219, 219);
+  cursor: pointer;
 }
 
 .content {

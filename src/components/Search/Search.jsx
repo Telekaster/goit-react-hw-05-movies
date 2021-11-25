@@ -4,13 +4,14 @@ import { Link } from "react-router-dom";
 
 export default function Search() {
   const [searchedMoovies, setSearchedMoovies] = useState();
+
   function handler(e) {
     const input = document.querySelector("#input");
     fetchSearch(input.value).then((data) => {
       return setSearchedMoovies(data.results);
     });
   }
-  console.log(searchedMoovies);
+
   return (
     <>
       <div>
@@ -24,7 +25,6 @@ export default function Search() {
         <div>
           <ul>
             {searchedMoovies.map((item) => {
-              console.log(item);
               return (
                 <li>
                   <Link to={{ pathname: `/moovies/${item.id}` }}>

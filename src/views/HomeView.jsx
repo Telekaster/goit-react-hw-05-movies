@@ -1,18 +1,12 @@
-import React from "react";
-import Header from "../components/Header/Header";
-import Trending from "../components/Trending/Trending";
-
-// const idHandler = (evt) => {
-//   console.log("Hello");
-// };
+import React, { lazy, Suspense } from "react";
+const Header = lazy(() => import("../components/Header/Header"));
+const Trending = lazy(() => import("../components/Trending/Trending"));
 
 export default function HomeView() {
   return (
-    <>
+    <Suspense fallback={<div>Loading...</div>}>
       <Header />
-      <Trending
-      // onClick={idHandler}
-      />
-    </>
+      <Trending />
+    </Suspense>
   );
 }

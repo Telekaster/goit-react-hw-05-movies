@@ -4,6 +4,7 @@ import MoovieView from "./views/MoovieView";
 import CastView from "./views/CastView";
 import ReviewsView from "./views/ReviewsView";
 import { Routes, Route } from "react-router-dom";
+import Redirect from "react-router-dom";
 
 function App() {
   return (

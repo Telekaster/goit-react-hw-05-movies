@@ -5,11 +5,16 @@
   border-bottom: 2px solid black;
 }
 
-.header__nav_links {
+.header__nav_links_active {
+  margin-right: 25px;
+  color: orangered;
+}
+
+.header__nav_links_inactive {
   margin-right: 25px;
   color: black;
 }
 
-.header__nav_links:hover {
+.header__nav_links_inactive:hover {
   color: orangered;
 }

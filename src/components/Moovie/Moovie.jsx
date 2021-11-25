@@ -1,5 +1,5 @@
 import { React, useState, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import fetchMovies from "../../services/fetchMovies";
 import style from "./Moovie.module.css";
 
@@ -7,6 +7,7 @@ export default function Moovie() {
   const [currentMoovie, setCurrentMoovie] = useState();
   const urlString = document.location.pathname;
   const path = useRef(`movie/${getID(urlString)}`);
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetchMovies(path).then((data) => {
@@ -17,9 +18,15 @@ export default function Moovie() {
   return (
     <>
       <div className={style.content}>
-        <Link to="/" className={style.back_btn}>
+        <button
+          type="button"
+          className={style.back_btn}
+          onClick={() => {
+            navigate(-1);
+          }}
+        >
           Go Back
-        </Link>
+        </button>
 
         {!currentMoovie ? (
           <p>Loading...</p>
