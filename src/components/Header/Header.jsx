@@ -9,7 +9,7 @@ export default function Header() {
         <Link to="/" className={styles.header__nav_links}>
           Home
         </Link>
-        <Link to className={styles.header__nav_links}>
+        <Link to="/search_movie" className={styles.header__nav_links}>
           Movies
         </Link>
       </nav>

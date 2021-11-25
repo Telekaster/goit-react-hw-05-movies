@@ -17,9 +17,10 @@ export default function Moovie() {
   return (
     <>
       <div className={style.content}>
-        <button type="button" className={style.back_btn}>
+        <Link to="/" className={style.back_btn}>
           Go Back
-        </button>
+        </Link>
+
         {!currentMoovie ? (
           <p>Loading...</p>
         ) : (
