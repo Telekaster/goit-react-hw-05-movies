@@ -7,7 +7,6 @@ export default function Cast() {
 
   useEffect(() => {
     fetchCredits(id).then((data) => {
-      console.log(data.cast);
       setCast(data.cast);
     });
   });

@@ -16,7 +16,6 @@ export default function Reviews() {
         <p>Loading...</p>
       ) : (
         reviews.map((review) => {
-          console.log(review);
           return (
             <li>
               <p>
