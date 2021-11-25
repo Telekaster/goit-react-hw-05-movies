@@ -63,7 +63,7 @@ export default function Moovie() {
             <Link to={`/moovies/${getID(urlString)}/cast`}>Cast</Link>
           </li>
           <li>
-            <Link to>Previews</Link>
+            <Link to={`/moovies/${getID(urlString)}/reviews`}>Previews</Link>{" "}
           </li>
         </ul>
       </div>
