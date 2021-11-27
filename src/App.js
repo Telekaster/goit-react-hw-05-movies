@@ -1,10 +1,15 @@
 import React, { lazy, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
-import HomeView from "./views/HomeView";
-import SearchView from "./views/SearchView";
-import MoovieView from "./views/MoovieView";
-import CastView from "./views/CastView";
-import ReviewsView from "./views/ReviewsView";
+const HomeView = lazy(() => import("./views/HomeView"));
+// import HomeView from "./views/HomeView";
+const SearchView = lazy(() => import("./views/SearchView"));
+// import SearchView from "./views/SearchView";
+const MoovieView = lazy(() => import("./views/MoovieView"));
+// import MoovieView from "./views/MoovieView";
+const CastView = lazy(() => import("./views/CastView"));
+// import CastView from "./views/CastView";
+const ReviewsView = lazy(() => import("./views/ReviewsView"));
+// import ReviewsView from "./views/ReviewsView";
 
 function App() {
   return (

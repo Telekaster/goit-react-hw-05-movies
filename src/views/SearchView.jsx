@@ -1,6 +1,5 @@
-import React, { lazy, Suspense } from "react";
-const Header = lazy(() => import("../components/Header/Header"));
-const Search = lazy(() => import("../components/Search/Search"));
+import Header from "../components/Header/Header";
+import Search from "../components/Search/Search";
 
 export default function SearchView() {
   return (

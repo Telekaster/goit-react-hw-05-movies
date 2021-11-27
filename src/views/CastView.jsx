@@ -1,7 +1,6 @@
-import React, { lazy, Suspense } from "react";
-const Header = lazy(() => import("../components/Header/Header"));
-const Moovie = lazy(() => import("../components/Moovie/Moovie"));
-const Cast = lazy(() => import("../components/Cast/Cast"));
+import Header from "../components/Header/Header";
+import Moovie from "../components/Moovie/Moovie";
+import Cast from "../components/Cast/Cast";
 
 export default function CastView(params) {
   return (

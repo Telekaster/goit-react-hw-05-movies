@@ -1,7 +1,6 @@
-import React, { lazy, Suspense } from "react";
-const Header = lazy(() => import("../components/Header/Header"));
-const Moovie = lazy(() => import("../components/Moovie/Moovie"));
-const Reviews = lazy(() => import("../components/Reviews/Reviews"));
+import Header from "../components/Header/Header";
+import Moovie from "../components/Moovie/Moovie";
+import Reviews from "../components/Reviews/Reviews";
 
 export default function ReviewsView() {
   return (

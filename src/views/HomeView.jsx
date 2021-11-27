@@ -1,6 +1,5 @@
-import React, { lazy, Suspense } from "react";
-const Header = lazy(() => import("../components/Header/Header"));
-const Trending = lazy(() => import("../components/Trending/Trending"));
+import Header from "../components/Header/Header";
+import Trending from "../components/Trending/Trending";
 
 export default function HomeView() {
   return (
