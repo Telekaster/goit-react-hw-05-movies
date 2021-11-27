@@ -4,9 +4,9 @@ const Moovie = lazy(() => import("../components/Moovie/Moovie"));
 
 export default function MoovieView() {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <>
       <Header />
       <Moovie />
-    </Suspense>
+    </>
   );
 }

@@ -5,10 +5,10 @@ const Cast = lazy(() => import("../components/Cast/Cast"));
 
 export default function CastView(params) {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <>
       <Header />
       <Moovie />
       <Cast />
-    </Suspense>
+    </>
   );
 }

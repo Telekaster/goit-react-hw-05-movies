@@ -4,9 +4,9 @@ const Search = lazy(() => import("../components/Search/Search"));
 
 export default function SearchView() {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <>
       <Header />
       <Search />
-    </Suspense>
+    </>
   );
 }
