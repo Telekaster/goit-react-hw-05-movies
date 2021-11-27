@@ -1,3 +1,3 @@
 https://telek-goit-react-hw-05-movies-telek.netlify.app/
 
-commit: 1.0
+commit: 1.1

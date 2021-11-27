@@ -1,7 +1,10 @@
-import { React, useState, useEffect, useRef } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { React, useState, useEffect, useRef, lazy, Suspense } from "react";
+import { Link, useNavigate, Routes, Route } from "react-router-dom";
 import { fetchMovies } from "../../services/api";
 import style from "./Moovie.module.css";
+
+// const CastView = lazy(() => import("../../views/CastView"));
+// const ReviewsView = lazy(() => import("../../views/ReviewsView"));
 
 export default function Moovie() {
   const [currentMoovie, setCurrentMoovie] = useState();
@@ -75,6 +78,12 @@ export default function Moovie() {
           </li>
         </ul>
       </div>
+      {/* <Suspense fallback={<div>Loading...</div>}>
+        <Routes>
+          <Route path="/moovies/:id/cast" element={<CastView />} />
+          <Route path="/moovies/:id/reviews" element={<ReviewsView />} />
+        </Routes>
+      </Suspense> */}
     </>
   );
 }
