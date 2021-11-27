@@ -1,5 +1,5 @@
 import { React, useState } from "react";
-import fetchReviews from "../../services/fetchReviews";
+import { fetchReviews } from "../../services/api";
 
 export default function Reviews() {
   const [reviews, setReviews] = useState();

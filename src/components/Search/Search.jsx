@@ -1,5 +1,5 @@
 import { React, useState } from "react";
-import fetchSearch from "../../services/fetchSearch";
+import { fetchSearch } from "../../services/api";
 import { Link } from "react-router-dom";
 
 export default function Search() {

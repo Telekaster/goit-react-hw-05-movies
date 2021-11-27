@@ -1,6 +1,6 @@
 import { React, useState, useEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import fetchMovies from "../../services/fetchMovies";
+import { fetchMovies } from "../../services/api";
 import style from "./Moovie.module.css";
 
 export default function Moovie() {

@@ -1,6 +1,6 @@
 import { React, useState, useRef, useEffect, useParams } from "react";
 import PropTypes from "prop-types";
-import fetchMovies from "../../services/fetchMovies";
+import { fetchMovies } from "../../services/api";
 import { Link } from "react-router-dom";
 // import idHandler from "../../views/HomeView";
 

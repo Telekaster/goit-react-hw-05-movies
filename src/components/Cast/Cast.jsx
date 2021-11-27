@@ -1,5 +1,5 @@
 import { React, useState, useEffect } from "react";
-import fetchCredits from "../../services/fetchCredits";
+import { fetchCredits } from "../../services/api";
 
 export default function Cast() {
   const [cast, setCast] = useState();
