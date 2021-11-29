@@ -5,7 +5,7 @@ import Reviews from "../components/Reviews/Reviews";
 export default function ReviewsView() {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <Moovie />
       <Reviews />
     </>

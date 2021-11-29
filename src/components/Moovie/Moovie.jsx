@@ -1,10 +1,10 @@
 import { React, useState, useEffect, useRef, lazy, Suspense } from "react";
-import { Link, useNavigate, Routes, Route } from "react-router-dom";
+import { NavLink, useNavigate, Routes, Route } from "react-router-dom";
 import { fetchMovies } from "../../services/api";
 import style from "./Moovie.module.css";
 
-// const CastView = lazy(() => import("../../views/CastView"));
-// const ReviewsView = lazy(() => import("../../views/ReviewsView"));
+const Cast = lazy(() => import("../Cast/Cast"));
+const Reviews = lazy(() => import("../Reviews/Reviews"));
 
 export default function Moovie() {
   const [currentMoovie, setCurrentMoovie] = useState();
@@ -71,19 +71,20 @@ export default function Moovie() {
         <h3>Additional information:</h3>
         <ul>
           <li>
-            <Link to={`/moovies/${getID(urlString)}/cast`}>Cast</Link>
+            <NavLink to="cast">Cast</NavLink>
           </li>
           <li>
-            <Link to={`/moovies/${getID(urlString)}/reviews`}>Previews</Link>{" "}
+            <NavLink to="reviews">Review</NavLink>
           </li>
         </ul>
       </div>
-      {/* <Suspense fallback={<div>Loading...</div>}>
+      ;
+      <Suspense fallback={<div>Loading...</div>}>
         <Routes>
-          <Route path="/moovies/:id/cast" element={<CastView />} />
-          <Route path="/moovies/:id/reviews" element={<ReviewsView />} />
+          <Route path="cast" element={<Cast />} />
+          <Route path="reviews" element={<Reviews />} />
         </Routes>
-      </Suspense> */}
+      </Suspense>
     </>
   );
 }

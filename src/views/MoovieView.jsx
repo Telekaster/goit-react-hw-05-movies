@@ -4,7 +4,7 @@ import Moovie from "../components/Moovie/Moovie";
 export default function MoovieView() {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <Moovie />
     </>
   );

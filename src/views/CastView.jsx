@@ -5,7 +5,7 @@ import Cast from "../components/Cast/Cast";
 export default function CastView(params) {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <Moovie />
       <Cast />
     </>

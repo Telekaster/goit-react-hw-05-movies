@@ -4,7 +4,7 @@ import Search from "../components/Search/Search";
 export default function SearchView() {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <Search />
     </>
   );
