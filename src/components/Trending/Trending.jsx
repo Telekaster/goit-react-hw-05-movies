@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 // import idHandler from "../../views/HomeView";
 
 export default function Trending() {
-  const [moovies, setMovies] = useState();
+  const [movies, setMovies] = useState();
   const trending = useRef("trending/all/day");
 
   useEffect(() => {
@@ -17,13 +17,13 @@ export default function Trending() {
   return (
     <>
       <h1>Trending today</h1>
-      {!moovies ? (
+      {!movies ? (
         <h2>Loading...</h2>
       ) : (
         <ul>
-          {moovies.map((item) => (
+          {movies.map((item) => (
             <li>
-              <Link to={{ pathname: `/moovies/${item.id}` }}>
+              <Link to={{ pathname: `/movies/${item.id}` }}>
                 {item.name || item.title}
               </Link>
             </li>

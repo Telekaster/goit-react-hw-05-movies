@@ -1,25 +1,27 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import styles from "./Header.module.css";
 
 export default function Header() {
   return (
     <header>
       <nav className={styles.nav}>
-        <Link
+        <NavLink
           to="/"
-          className={styles.header__nav_links_inactive}
-          activeClassName={styles.header__nav_links_active}
+          className={({ isActive }) =>
+            isActive ? styles.nav__link_active : styles.nav__link
+          }
         >
           Home
-        </Link>
-        <Link
+        </NavLink>
+        <NavLink
           to="/search_movie"
-          className={styles.header__nav_links_inactive}
-          activeClassName={styles.header__nav_links_active}
+          className={({ isActive }) =>
+            isActive ? styles.nav__link_active : styles.nav__link
+          }
         >
           Movies
-        </Link>
+        </NavLink>
       </nav>
     </header>
   );

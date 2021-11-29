@@ -1,11 +1,11 @@
 import Header from "../components/Header/Header";
-import Moovie from "../components/Moovie/Moovie";
+import Movie from "../components/Movie/Movie";
 
-export default function MoovieView() {
+export default function MovieView() {
   return (
     <>
       {/* <Header /> */}
-      <Moovie />
+      <Movie />
     </>
   );
 }

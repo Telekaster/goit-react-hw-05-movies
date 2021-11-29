@@ -1,12 +1,12 @@
 import Header from "../components/Header/Header";
-import Moovie from "../components/Moovie/Moovie";
+import Movie from "../components/Movie/Movie";
 import Reviews from "../components/Reviews/Reviews";
 
 export default function ReviewsView() {
   return (
     <>
       {/* <Header /> */}
-      <Moovie />
+      <Movie />
       <Reviews />
     </>
   );

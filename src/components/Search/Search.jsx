@@ -3,12 +3,12 @@ import { fetchSearch } from "../../services/api";
 import { Link } from "react-router-dom";
 
 export default function Search() {
-  const [searchedMoovies, setSearchedMoovies] = useState();
+  const [searchedMovies, setSearchedMovies] = useState();
 
   function handler(e) {
     const input = document.querySelector("#input");
     fetchSearch(input.value).then((data) => {
-      return setSearchedMoovies(data.results);
+      return setSearchedMovies(data.results);
     });
   }
 
@@ -21,13 +21,13 @@ export default function Search() {
         </button>
       </div>
 
-      {searchedMoovies && (
+      {searchedMovies && (
         <div>
           <ul>
-            {searchedMoovies.map((item) => {
+            {searchedMovies.map((item) => {
               return (
                 <li>
-                  <Link to={{ pathname: `/moovies/${item.id}` }}>
+                  <Link to={{ pathname: `/movies/${item.id}` }}>
                     {item.title}
                   </Link>
                 </li>

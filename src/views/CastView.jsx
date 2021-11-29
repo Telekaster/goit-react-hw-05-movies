@@ -1,12 +1,12 @@
 import Header from "../components/Header/Header";
-import Moovie from "../components/Moovie/Moovie";
+import Movie from "../components/Movie/Movie";
 import Cast from "../components/Cast/Cast";
 
 export default function CastView(params) {
   return (
     <>
       {/* <Header /> */}
-      <Moovie />
+      <Movie />
       <Cast />
     </>
   );

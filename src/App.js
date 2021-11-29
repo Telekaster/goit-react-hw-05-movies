@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
 const HomeView = lazy(() => import("./views/HomeView"));
 const SearchView = lazy(() => import("./views/SearchView"));
-const MoovieView = lazy(() => import("./views/MoovieView"));
+const MovieView = lazy(() => import("./views/MovieView"));
 const CastView = lazy(() => import("./views/CastView"));
 const ReviewsView = lazy(() => import("./views/ReviewsView"));
 
@@ -16,7 +16,7 @@ function App() {
         <Routes>
           <Route path="/" exact element={<HomeView />} />
           <Route path="/search_movie" element={<SearchView />} />
-          <Route path="/moovies/:id/*" element={<MoovieView />} />
+          <Route path="/movies/:id/*" element={<MovieView />} />
         </Routes>
       </Suspense>
     </>

@@ -1,20 +1,20 @@
 import { React, useState, useEffect, useRef, lazy, Suspense } from "react";
 import { NavLink, useNavigate, Routes, Route } from "react-router-dom";
 import { fetchMovies } from "../../services/api";
-import style from "./Moovie.module.css";
+import style from "./Movie.module.css";
 
 const Cast = lazy(() => import("../Cast/Cast"));
 const Reviews = lazy(() => import("../Reviews/Reviews"));
 
-export default function Moovie() {
-  const [currentMoovie, setCurrentMoovie] = useState();
+export default function Movie() {
+  const [currentMovie, setCurrentmovie] = useState();
   const urlString = document.location.pathname;
   const path = useRef(`movie/${getID(urlString)}`);
   const navigate = useNavigate();
 
   useEffect(() => {
     fetchMovies(path).then((data) => {
-      setCurrentMoovie(data);
+      setCurrentmovie(data);
     });
   });
 
@@ -31,35 +31,35 @@ export default function Moovie() {
           Go Back
         </button>
 
-        {!currentMoovie ? (
+        {!currentMovie ? (
           <p>Loading...</p>
         ) : (
-          <div className={style.moovie_section}>
+          <div className={style.movie_section}>
             <img
-              src={`https://www.themoviedb.org/t/p/w440_and_h660_face/${currentMoovie.poster_path}`}
-              alt={currentMoovie.title || currentMoovie.name}
+              src={`https://www.themoviedb.org/t/p/w440_and_h660_face/${currentMovie.poster_path}`}
+              alt={currentMovie.title || currentMovie.name}
               className={style.image}
             />
 
             <div>
               <h2 className={style.description}>
-                {currentMoovie.title || currentMoovie.name}
+                {currentMovie.title || currentMovie.name}
                 <span>
                   (
-                  {currentMoovie.release_date &&
-                    currentMoovie.release_date.slice(0, 4)}
+                  {currentMovie.release_date &&
+                    currentMovie.release_date.slice(0, 4)}
                   )
                 </span>
               </h2>
               <p className={style.description}>
-                User Score: <span>{currentMoovie.vote_average * 10}%</span>
+                User Score: <span>{currentMovie.vote_average * 10}%</span>
               </p>
               <h3 className={style.description}>Overview:</h3>
-              <p className={style.description}>{currentMoovie.overview}</p>
+              <p className={style.description}>{currentMovie.overview}</p>
               <h3>Genres:</h3>
               <p className={style.description}>
-                {currentMoovie.genres &&
-                  currentMoovie.genres.map((genre) => {
+                {currentMovie.genres &&
+                  currentMovie.genres.map((genre) => {
                     return `${genre.name}, `;
                   })}
               </p>
