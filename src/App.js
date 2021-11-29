@@ -16,9 +16,7 @@ function App() {
         <Routes>
           <Route path="/" exact element={<HomeView />} />
           <Route path="/search_movie" element={<SearchView />} />
-          <Route path="/moovies/:id" element={<MoovieView />} />
-          {/* <Route path="/moovies/:id/cast" element={<CastView />} /> */}
-          {/* <Route path="/moovies/:id/reviews" element={<ReviewsView />} /> */}
+          <Route path="/moovies/:id/*" element={<MoovieView />} />
         </Routes>
       </Suspense>
     </>
